@@ -13,7 +13,7 @@ function TodoList({ todos, toggleComplete, deleteTodo, editTodo }) {
               onChange={() => toggleComplete(todo.id)}
             />
             <span
-              className={todo.completed ? "completed" : ""}
+              className={todo.completed ? "blurred" : ""}
             >
               {todo.text}
             </span>

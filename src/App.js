@@ -22,14 +22,14 @@ function App() {
     if (!text) return;
 
     if (editId) {
-      // Editing mode
+      // Editing an existing todo
       const updatedTodos = todos.map((todo) =>
         todo.id === editId ? { ...todo, text } : todo
       );
       setTodos(updatedTodos);
       setEditId(null);
     } else {
-      // Adding new todo
+      // Adding a new todo
       const newTodo = {
         id: Date.now(),
         text,
@@ -60,8 +60,8 @@ function App() {
   };
 
   return (
-    <div className="todo-container">
-      
+    <div className="todo-container p-5">
+
       <TodoInput
         inputValue={inputValue}
         setInputValue={setInputValue}
